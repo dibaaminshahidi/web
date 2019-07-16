@@ -4,12 +4,13 @@ div, body {
 
 .container {
   font-family: "Gill Sans", sans-serif;
+  display: flex;
+  flex-flow: column;
   border: 2px solid #0b245b;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-top: 0;
-  margin: 5px;
-  box-sizing: content-box; }
+  margin: 5px; }
   .container .heading {
     background-color: #0b245b;
     min-height: 50px;
@@ -51,7 +52,6 @@ div, body {
     flex-flow: row wrap;
     justify-content: center; }
     .container .boards .board {
-      flex-grow: 1;
       display: flex;
       flex-flow: column wrap;
       justify-content: flex-start;
@@ -67,6 +67,21 @@ div, body {
       /* Medium devices (landscape tablets, 768px and up) */
       /* Large devices (laptops/desktops, 992px and up) */
       /* Extra large devices (large laptops and desktops, 1200px and up) */ }
+      @media only screen and (max-width: 600px) {
+        .container .boards .board {
+          width: 70%; } }
+      @media only screen and (min-width: 600px) {
+        .container .boards .board {
+          width: 70%; } }
+      @media only screen and (min-width: 768px) {
+        .container .boards .board {
+          width: 70%; } }
+      @media only screen and (min-width: 992px) {
+        .container .boards .board {
+          width: 40%; } }
+      @media only screen and (min-width: 1200px) {
+        .container .boards .board {
+          width: 40%; } }
       .container .boards .board .name {
         text-align: center;
         width: 100%;
@@ -80,9 +95,13 @@ div, body {
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
-        align-items: flex-start;
+        flex-grow: 1;
+        align-items: stretch;
         padding: 20px 16px 14px; }
         .container .boards .board .body .member {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
           color: #0b245b;
           width: 70%;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -92,6 +111,8 @@ div, body {
           border-radius: 7px;
           background-color: #e1e0e0;
           padding: 2px 16px 14px; }
+          .container .boards .board .body .member names {
+            background-color: yellow; }
           .container .boards .board .body .member .button {
             background-color: #0b245b;
             height: fixed;
@@ -110,18 +131,21 @@ div, body {
         .container .boards .board .body .owner {
           width: 30%;
           padding: 2px 16px 14px; }
-  .container .button {
-    background-color: #98063a;
-    height: fixed;
-    width: 100%;
-    border: none;
-    color: #f9faf5;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 15px 0px 0px 0px;
-    cursor: pointer;
-    border-radius: 7px; }
-  .container button:hover {
-    background-color: rgba(152, 6, 58, 0.8); }
+  .container .add {
+    padding: 5px; }
+    .container .add .button {
+      flex-grow: 1;
+      background-color: #98063a;
+      height: fixed;
+      width: 100%;
+      border: none;
+      color: #f9faf5;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 15px 0px 0px 0px;
+      cursor: pointer;
+      border-radius: 7px; }
+    .container .add button:hover {
+      background-color: rgba(152, 6, 58, 0.8); }
