@@ -1,0 +1,151 @@
+div, body {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  font-family: "Gill Sans", sans-serif;
+  display: flex;
+  flex-flow: column;
+  border: 2px solid #0b245b;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top: 0;
+  margin: 5px; }
+  .container .heading {
+    background-color: #0b245b;
+    min-height: 50px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid #0b245b;
+    text-align: center;
+    color: #e1e0e0; }
+  .container .navigation {
+    list-style: none;
+    margin: 0;
+    background: #e1e0e0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start; }
+  .container .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #0b245b; }
+  .container .navigation a:hover {
+    background: rgba(11, 36, 91, 0.8);
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    color: #e1e0e0; }
+  @media only screen and (min-width: 800px) {
+    .container .navigation {
+      justify-content: start; } }
+  @media only screen and (max-width: 801px) {
+    .container .navigation {
+      text-align: center;
+      flex-flow: column wrap;
+      padding: 0; }
+    .container .navigation li:last-of-type a {
+      border-bottom: none; } }
+  .container .boards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    .container .boards .board {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      margin: 10px 25px 10px 25px;
+      border: 1px solid #0b245b;
+      border-radius: 7px;
+      background-color: #f9faf5;
+      overflow: hidden;
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      /* Medium devices (landscape tablets, 768px and up) */
+      /* Large devices (laptops/desktops, 992px and up) */
+      /* Extra large devices (large laptops and desktops, 1200px and up) */ }
+      @media only screen and (max-width: 600px) {
+        .container .boards .board {
+          width: 70%; } }
+      @media only screen and (min-width: 600px) {
+        .container .boards .board {
+          width: 70%; } }
+      @media only screen and (min-width: 768px) {
+        .container .boards .board {
+          width: 70%; } }
+      @media only screen and (min-width: 992px) {
+        .container .boards .board {
+          width: 40%; } }
+      @media only screen and (min-width: 1200px) {
+        .container .boards .board {
+          width: 40%; } }
+      .container .boards .board .name {
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+        background-color: #98063a;
+        color: #f9faf5; }
+      .container .boards .board .body {
+        width: 100%;
+        color: #0b245b;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        flex-grow: 1;
+        align-items: stretch;
+        padding: 20px 16px 14px; }
+        .container .boards .board .body .member {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          color: #0b245b;
+          width: 70%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          transition: 0.3s;
+          margin: 5px 5px 0 5px;
+          border: 1px solid #0b245b;
+          border-radius: 7px;
+          background-color: #e1e0e0;
+          padding: 2px 16px 14px; }
+          .container .boards .board .body .member names {
+            background-color: yellow; }
+          .container .boards .board .body .member .button {
+            background-color: #0b245b;
+            height: fixed;
+            width: 100%;
+            border: none;
+            color: #e1e0e0;
+            padding: 10px 25px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px 0px 0px 0px;
+            cursor: pointer;
+            border-radius: 7px; }
+          .container .boards .board .body .member button:hover {
+            background-color: rgba(11, 36, 91, 0.8); }
+        .container .boards .board .body .owner {
+          width: 30%;
+          padding: 2px 16px 14px; }
+  .container .add {
+    padding: 5px; }
+    .container .add .button {
+      flex-grow: 1;
+      background-color: #98063a;
+      height: fixed;
+      width: 100%;
+      border: none;
+      color: #f9faf5;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      margin: 15px 0px 0px 0px;
+      cursor: pointer;
+      border-radius: 7px; }
+    .container .add button:hover {
+      background-color: rgba(152, 6, 58, 0.8); }
